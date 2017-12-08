@@ -17,6 +17,8 @@
         <div class="photo-desc">
             <p v-html="imgInfo.content"></p>
         </div>
+        <!-- 使用评论组件 ,并将参数穿传过去，在评论组件里用cid查询-->
+        <comment :cid="$route.params.imgId"></comment>
     </div>
 </template>
 <script>

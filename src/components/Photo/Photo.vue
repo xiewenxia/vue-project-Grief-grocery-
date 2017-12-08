@@ -1,5 +1,5 @@
 <template>
-    <div class="tmpl">
+    <div>
         <nav-bar title="图片分享"></nav-bar>
         <!-- 引入返回导航 -->
         <div class="photo-header">

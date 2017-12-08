@@ -1,5 +1,5 @@
 <template>
-    <div class="tmpl">
+    <div>
         <!-- 将上部提取成一个公共组件 -->
 
           

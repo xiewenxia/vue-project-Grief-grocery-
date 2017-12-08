@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 头部 -->
-        <mt-header title="解忧杂货铺"></mt-header>
+        <mt-header title="解忧杂货铺" fixed></mt-header>
         <!-- 中间区域  给home留坑-->
         <router-view></router-view>
         <!-- 底部区域 -->
@@ -29,23 +29,26 @@
 export default {
   data() {
     return {
-      selected: ''
+      selected: ""
     };
   },
-//   监视selected，改变其锚点值
-    watch: {
-        selected(newV) {
-            // console.log(newV);
-            // 利用push更改其锚点值
-            this.$router.push({
-                name: newV
-            })
-        }
+  //   监视selected，改变其锚点值
+  watch: {
+    selected(newV) {
+      // console.log(newV);
+      // 利用push更改其锚点值
+      this.$router.push({
+        name: newV
+      });
     }
+  }
 };
 </script>
 <style scoped>
-
+.mint-tabbar {
+  position: fixed;
+  bottom: 0;
+}
 </style>
 
 

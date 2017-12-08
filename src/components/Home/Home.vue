@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="tmpl">
         <mt-swipe :auto="4000">
             <mt-swipe-item v-for="(pic,index) in imgs" :key="index">
                 <a :href="pic.url">
@@ -47,7 +47,7 @@ export default {
           {
               className: 'goods',
               title: '商品列表',
-              router:  {name: 'news.list'}
+              router:  {name: 'goods.list',query:{page:1}}
           },
           {
               className: 'feedback',

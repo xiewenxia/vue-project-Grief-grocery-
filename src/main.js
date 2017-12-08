@@ -20,11 +20,13 @@ Vue.filter('convertTitle', (value,limit) => {
 // ===========注册全局组件==================
 import MyUl from './components/commons/MyUl.vue';
 import MyLi from './components/commons/MyLi.vue';
-import NavBar from './components/commons/NavBar.vue'
+import NavBar from './components/commons/NavBar.vue';
+import Comment from './components/commons/Comment.vue';
 // console.log(MyUl);
 Vue.component(MyUl.name, MyUl);
 Vue.component(MyLi.name, MyLi);
 Vue.component(NavBar.name, NavBar);
+Vue.component(Comment.name,Comment);
 
 
 // =======路由相关组件===============
@@ -37,6 +39,10 @@ import NewsList from './components/News/NewsList.vue';
 import NewsDetail from './components/News/NewsDetail.vue';
 import PhotoList from './components/Photo/Photo.vue';
 import PhotoDetail from './components/Photo/PhotoDetail.vue';
+// 引入测试路由
+// import Comment from './components/commons/Comment.vue';
+// 引入商品列表路由
+import GoodsList from './components/Goods/GoodsList.vue';
 
 // ===========vue-router开始================
 import VueRouter from 'vue-router';
@@ -55,7 +61,14 @@ router.addRoutes([
     {name: 'news.list', path: '/news/list', component: NewsList},
     {name: 'news.detail', path: '/news/detail', component: NewsDetail},
     {name: 'photo.list', path: '/photo/list/:categoryId', component: PhotoList},
-    {name: 'photo.detail', path: '/photo/detail/:imgId', component: PhotoDetail}
+    {name: 'photo.detail', path: '/photo/detail/:imgId', component: PhotoDetail},
+    // 测试评论路由
+    {name: 'test', path: '/test', component: Comment},
+    // 评论路由
+    {name: 'comment', path: '/comment', component: Comment},
+    // 商品列表
+    {name: 'goods.list', path: '/goods/list', component: GoodsList},
+
 ])
 // ===========vue-router结束================
 
